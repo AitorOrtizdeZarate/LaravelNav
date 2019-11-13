@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel nav</title>
+        <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -58,14 +60,21 @@
                 text-transform: uppercase;
                 border-right: 1px solid;
                 border-left: 1px solid;
+
                 
             }
             .links{
                 border: 1px solid;
+                
             }
 
             .m-b-md {
                 margin-bottom: 30px;
+            }
+
+            #logo{
+                height: 40px;
+                width: 40px;
             }
         </style>
     </head>
@@ -73,18 +82,14 @@
        
 
             <div class="content">
-                
-
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <img src="imagenes/logo.png" id="logo">
+                    <a href="https://laravel.com/docs">Empleados</a>
+                    <a href="https://laracasts.com">Proyecto</a>
+                    <a href="https://laravel-news.com">Departamento</a>
+                   
                 </div>
+
             </div>
              <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
