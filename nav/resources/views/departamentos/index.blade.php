@@ -13,8 +13,8 @@
     </tr>
 
     <tr>
-      <td>Aqui el id</td>
-      <td>Aqui el nombre</td>
+      <td>{{$departamentos->id}}</td>
+      <td>{{$nombre}}</td>
     </tr>
 
   </table>

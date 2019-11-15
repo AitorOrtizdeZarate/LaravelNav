@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('empleados', function(){
+	return view('empleados/index');
+});
+Route::get('proyectos', function(){
+	return view('proyectos/index');
+});
+Route::get('departamentos', 'listarController@departamentos');
+ 

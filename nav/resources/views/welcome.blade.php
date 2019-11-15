@@ -84,9 +84,9 @@
             <div class="content">
                 <div class="links">
                     <img src="imagenes/logo.png" id="logo">
-                    <a href="https://laravel.com/docs">Empleados</a>
-                    <a href="https://laracasts.com">Proyecto</a>
-                    <a href="https://laravel-news.com">Departamento</a>
+                    <a href="empleados">Empleados</a>
+                    <a href="proyectos">Proyecto</a>
+                    <a href="departamentos">Departamento</a>
                    
                 </div>
 
