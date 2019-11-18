@@ -4,7 +4,7 @@
 
 @section('content')
 
-  <h2>Empleados</h2>
+  <h2>Persona Empleados</h2>
 
     <table>
       <tr>
@@ -15,7 +15,7 @@
       </tr>
       @foreach ($empleados as $empleado)
       <tr>
-        <td><a href="personaEmpleados">{{$empleado->id}}</a></td>
+        <td>{{$empleado->id}}</td>
         <td>{{$empleado->nombre}}</td>
         <td>{{$empleado->email}}</td>
         <td>{{$empleado->telefono}}</td>
