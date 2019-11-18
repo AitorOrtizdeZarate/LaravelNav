@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\departamento;
+use App\empleado;
+use App\proyecto;
 
 
 class listarController extends Controller
@@ -12,5 +14,15 @@ class listarController extends Controller
     {
         $departamentos = departamento::all();
         return view('departamentos.index')->with('departamentos', $departamentos);
+    }
+    public function empleados()
+    {
+        $empleados = empleado::all();
+        return view('empleados.index')->with('empleados', $empleados);
+    }
+    public function proyectos()
+    {
+        $proyectos = proyecto::all();
+        return view('proyectos.index')->with('proyectos', $proyectos);
     }
 }
