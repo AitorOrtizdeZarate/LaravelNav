@@ -25,4 +25,9 @@ class listarController extends Controller
         $proyectos = proyecto::all();
         return view('proyectos.index')->with('proyectos', $proyectos);
     }
+
+    public function show($id){
+    	$empleados= empleado::find($id);
+    	return view('persona.empleado', compact('empleados'));
+    }
 }
