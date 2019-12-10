@@ -8,14 +8,13 @@
 
     <div class="flex-center position-ref full-height">
         <div class="content">
-            <div class="title m-b-md">
-                Relations
-            </div>
+           
 
-            <div class="links">
-                <a href="">Proyectos</a>
-                <a href="">Empleados</a>
-                <a href="">Departamentos</a>
+            <div class="links" >
+               <img src="imagenes/logo.png" id="logo" style="height: 40px; width: 40px;">
+                    <a href="empleados">Empleados</a>
+                    <a href="proyectos">Proyecto</a>
+                    <a href="departamentos">Departamento</a>
             </div>
             <hr><br><br>
             <div class="op">

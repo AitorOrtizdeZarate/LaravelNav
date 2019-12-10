@@ -72,10 +72,7 @@
                 margin-bottom: 30px;
             }
 
-            #logo{
-                height: 40px;
-                width: 40px;
-            }
+           
         </style>
     </head>
     <body>
@@ -83,7 +80,7 @@
 
             <div class="content">
                 <div class="links">
-                    <img src="imagenes/logo.png" id="logo">
+                    <img src="imagenes/logo.png" id="logo" style="height: 40px; width: 40px;">
                     <a href="empleados">Empleados</a>
                     <a href="proyectos">Proyecto</a>
                     <a href="departamentos">Departamento</a>
