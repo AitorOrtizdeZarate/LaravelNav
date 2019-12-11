@@ -4,6 +4,7 @@
 
 @section('content')
 
+
   <h2>Persona Empleados</h2>
 
     <table>
@@ -15,12 +16,13 @@
       </tr>
       
       <tr>
-        <td>{{$empleado->id}}</td>
-        <td>{{$empleado->nombre}}</td>
-        <td>{{$empleado->email}}</td>
-        <td>{{$empleado->telefono}}</td>
+        <td>{{$empleados->id}}</td>
+        <td>{{$empleados->nombre}}</td>
+        <td>{{$empleados->email}}</td>
+        <td>{{$empleados->telefono}}</td>
       </tr>
      
     </table>
+
 
 @endsection

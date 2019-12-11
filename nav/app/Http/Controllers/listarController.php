@@ -28,6 +28,6 @@ class listarController extends Controller
 
     public function show($id){
     	$empleados= empleado::find($id);
-    	return view('persona.empleado', compact('empleados'));
+    	return view('empleados/personaEmpleado', compact('empleados'));
     }
 }
