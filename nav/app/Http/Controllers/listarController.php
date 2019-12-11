@@ -30,4 +30,9 @@ class listarController extends Controller
     	$empleados= empleado::find($id);
     	return view('empleados/personaEmpleado', compact('empleados'));
     }
+
+    public function showDepartamento($id){
+        $departamentos = departamento::find($id);
+        return view('departamentos/showDepartamento', compact('departamentos'));
+    }
 }

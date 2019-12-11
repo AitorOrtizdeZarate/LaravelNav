@@ -26,6 +26,7 @@ Route::get('empleados', 'listarController@empleados')->name('empleados.index');
 Route::get('proyectos', 'listarController@proyectos')->name('proyectos.index');
 
 Route::get('personaEmpleado/{id}', 'listarController@show')->name('persona.empleado');
+Route::get('showDepartamento/{id}', 'listarController@showDepartamento')->name('show.departamento');
 
 //Route::resource('/empleados', 'listarController');
  
