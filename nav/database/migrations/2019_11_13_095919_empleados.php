@@ -20,6 +20,10 @@ class Empleados extends Migration
             $table->string('email', 50);
             $table->string('telefono');
             $table->timestamps();
+
+            $table->unsignedBigInteger('departamento_id');
+
+            $table->foreign('departamento_id')->references('id')->on('departamentos');
         });
     }
 
