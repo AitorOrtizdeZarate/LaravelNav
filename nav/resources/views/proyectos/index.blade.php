@@ -25,6 +25,8 @@
         <td>{{$proyecto->fechafin}}</td>
         <td>{{$proyecto->horasestimadas}}</td>
         <td>{{$proyecto->empleado->nombre}}</td>
+        <td><a href="{{route('proyectos.edit', $proyecto->id)}}">Editar</a></td>
+        <td><a href="#">Eliminar</a></td>
       </tr>
       @endforeach
     </table>

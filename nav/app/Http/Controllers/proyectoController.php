@@ -69,7 +69,9 @@ class proyectoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $empleados = empleado::all();
+        $proyectos = proyecto::find($id);
+        return view('proyectos.edit')->with(['proyectos'=> $proyectos, 'empleados' => $empleados]);
     }
 
     /**
@@ -81,7 +83,15 @@ class proyectoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $proyecto = proyecto::find($id);
+        $proyecto->nombre = $request->input('nombre');
+        $proyecto->titulo = $request->input('titulo');
+        $proyecto->fechainicio = $request->input('fechainicio');
+        $proyecto->fechafin = $request->input('fechafin');
+        $proyecto->horasestimadas = $request->input('horasestimadas');
+        $proyecto->empleado_id = $request-> get('empleadoRes');
+        $proyecto->save();
+        return redirect()->route('proyectos.index')->with('success','Proyecto creado satisfactoriamente');
     }
 
     /**
