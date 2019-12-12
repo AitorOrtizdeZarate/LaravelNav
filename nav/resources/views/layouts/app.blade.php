@@ -11,10 +11,10 @@
            
 
             <div class="links" >
-               <img src="imagenes/logo.png" id="logo" style="height: 40px; width: 40px;">
-                    <a href="empleados">Empleados</a>
-                    <a href="proyectos">Proyecto</a>
-                    <a href="departamentos">Departamento</a>
+               <img src="{{URL::asset('imagenes/logo.png')}}" id="logo" style="height: 40px; width: 40px;">
+                    <a href="{{route('empleados.index')}}">Empleados</a>
+                    <a href="{{route('proyectos.index')}}">Proyecto</a>
+                    <a href="{{route('departamentos.index')}}">Departamento</a>
             </div>
             <hr><br><br>
             <div class="op">

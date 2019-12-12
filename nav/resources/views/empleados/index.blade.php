@@ -12,6 +12,7 @@
         <th>Nombre</th>
         <th>Email</th>
         <th>Telefono</th>
+        <th>Responsable de</th>
       </tr>
       @foreach ($empleados as $empleado)
       <tr>
@@ -19,6 +20,7 @@
         <td>{{$empleado->nombre}}</td>
         <td>{{$empleado->email}}</td>
         <td>{{$empleado->telefono}}</td>
+        <td>{{$empleado->proyecto->nombre}}</td>
       </tr>
       @endforeach
     </table>

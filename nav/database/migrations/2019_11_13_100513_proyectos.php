@@ -21,6 +21,10 @@ class proyectos extends Migration
             $table->date('fechafin');
             $table->integer('horasestimadas');
             $table->timestamps();
+
+            $table->unsignedBigInteger('empleado_id');
+
+            $table->foreign('empleado_id')->references('id')->on('empleados');
         });
     }
 

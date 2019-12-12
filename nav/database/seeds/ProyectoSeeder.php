@@ -20,11 +20,12 @@ class ProyectoSeeder extends Seeder
             $fechafin = strtotime ( "+".rand(30,500)." day" , strtotime ( $fecha ) ) ;
             $fechafin = date ( 'Y/m/d' , $fechafin );
         $proyectos = DB::table('proyectos')->insert([
-            'nombre' => 'Aitor'.$i,
+            'nombre' => 'Aitor'.($i+1),
             'titulo' => 'Ortiz de Zarate',
             'fechainicio' => $fechainicio,
             'fechafin' => $fechafin,
             'horasestimadas' => rand(500,3000),
+            'empleado_id' => rand(1,5)
         ]);
    		}
     }
