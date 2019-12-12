@@ -21,7 +21,7 @@ class ProyectoSeeder extends Seeder
             $fechafin = date ( 'Y/m/d' , $fechafin );
         $proyectos = DB::table('proyectos')->insert([
             'nombre' => 'Aitor'.($i+1),
-            'titulo' => 'Ortiz de Zarate',
+            'titulo' => 'Esturi'.($i+1),
             'fechainicio' => $fechainicio,
             'fechafin' => $fechafin,
             'horasestimadas' => rand(500,3000),

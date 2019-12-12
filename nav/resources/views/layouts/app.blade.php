@@ -11,7 +11,7 @@
            
 
             <div class="links" >
-               <img src="{{URL::asset('imagenes/logo.png')}}" id="logo" style="height: 40px; width: 40px;">
+               <a href="/"><img src="{{URL::asset('imagenes/logo.png')}}" id="logo" style="height: 40px; width: 40px;"></a>
                     <a href="{{route('empleados.index')}}">Empleados</a>
                     <a href="{{route('proyectos.index')}}">Proyecto</a>
                     <a href="{{route('departamentos.index')}}">Departamento</a>

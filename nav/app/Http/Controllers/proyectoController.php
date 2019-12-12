@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\proyecto;
+use App\empleado;
 
 class proyectoController extends Controller
 {
@@ -25,7 +26,8 @@ class proyectoController extends Controller
      */
     public function create()
     {
-        //
+        $empleados = empleado::all();
+        return view('proyectos.create')->with('empleados', $empleados);
     }
 
     /**
@@ -36,7 +38,15 @@ class proyectoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $proyecto = new proyecto;
+        $proyecto->nombre = $request->input('nombre');
+        $proyecto->titulo = $request->input('titulo');
+        $proyecto->fechainicio = $request->input('fechainicio');
+        $proyecto->fechafin = $request->input('fechafin');
+        $proyecto->horasestimadas = $request->input('horasestimadas');
+        $proyecto->empleado_id = $request-> get('empleadoRes');
+        $proyecto->save();
+        return redirect()->route('proyectos.index')->with('success','Proyecto creado satisfactoriamente');
     }
 
     /**
