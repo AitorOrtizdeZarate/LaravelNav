@@ -12,7 +12,7 @@
     Fecha inicio: <input type="date" name="fechainicio"><br>
     Fecha final: <input type="date" name="fechafin"><br>
     Horas estimadas: <input type="number" name="horasestimadas"><br>
-    Empleado Responsable -> {{$proyectos->empleados->nombre}}
+    Empleado Responsable
     <select name="empleadoRes">
       @foreach ($empleados as $empleado)
         @if(old('empleadoRes') == $empleado->id)

@@ -26,9 +26,17 @@
         <td>{{$proyecto->horasestimadas}}</td>
         <td>{{$proyecto->empleado->nombre}}</td>
         <td><a href="{{route('proyectos.edit', $proyecto->id)}}">Editar</a></td>
-        <td><a href="#">Eliminar</a></td>
+        <td>
+                <form action="{{ route('proyectos.destroy', $proyecto->id)}}" method="post">
+                  @csrf
+                  @method('DELETE')
+                  <input type="submit" value="Elimiar">
+                </form>
+            </td>
       </tr>
       @endforeach
     </table>
 
 @endsection
+
+

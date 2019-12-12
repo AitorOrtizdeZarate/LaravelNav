@@ -46,7 +46,7 @@ class proyectoController extends Controller
         $proyecto->horasestimadas = $request->input('horasestimadas');
         $proyecto->empleado_id = $request-> get('empleadoRes');
         $proyecto->save();
-        return redirect()->route('proyectos.index')->with('success','Proyecto creado satisfactoriamente');
+        return redirect()->route('proyectos.index');
     }
 
     /**
@@ -91,7 +91,7 @@ class proyectoController extends Controller
         $proyecto->horasestimadas = $request->input('horasestimadas');
         $proyecto->empleado_id = $request-> get('empleadoRes');
         $proyecto->save();
-        return redirect()->route('proyectos.index')->with('success','Proyecto creado satisfactoriamente');
+        return redirect()->route('proyectos.index');
     }
 
     /**
@@ -102,6 +102,8 @@ class proyectoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $proyecto = proyecto::find($id);
+        $proyecto->delete();
+        return redirect()->route('proyectos.index');
     }
 }
