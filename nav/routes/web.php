@@ -15,18 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('empleados', function(){
-	return view('empleados/index');
-});
-Route::get('proyectos', function(){
-	return view('proyectos/index');
-});
-Route::get('departamentos', 'listarController@departamentos')->name('departamentos.index');
-Route::get('empleados', 'listarController@empleados')->name('empleados.index');
-Route::get('proyectos', 'listarController@proyectos')->name('proyectos.index');
+Route::resource('/empleados', 'empleadoController');
+Route::resource('/proyectos', 'proyectoController');
+Route::resource('/departamentos', 'departamentoController');
 
-Route::get('personaEmpleado/{id}', 'listarController@show')->name('persona.empleado');
-Route::get('showDepartamento/{id}', 'listarController@showDepartamento')->name('show.departamento');
-
-//Route::resource('/empleados', 'listarController');
  
