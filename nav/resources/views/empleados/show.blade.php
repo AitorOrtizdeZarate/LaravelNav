@@ -15,6 +15,7 @@
         <th>Telefono</th>
         <th>Responsable de</th>
         <th>Colabora en</th>
+        <th>Jefe</th>
       </tr>
       
       <tr>
@@ -22,12 +23,22 @@
         <td>{{$empleados->nombre}}</td>
         <td>{{$empleados->email}}</td>
         <td>{{$empleados->telefono}}</td>
-        <td>{{$empleados->proyecto->nombre}}</td>
+        <td>
+          @if($empleados->proyecto)
+          {{$empleados->proyecto->nombre}}
+          @endif
+        </td>
         <td>
           
           @foreach($empleados->proyectos as $proyecto)
             {{$proyecto->nombre}}
           @endforeach
+
+        </td>
+         <td>
+           @if($empleados->jefeDe)
+            {{$empleados->jefeDe->nombre}}
+          @endif
 
         </td>
       </tr>

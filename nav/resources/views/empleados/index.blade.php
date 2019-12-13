@@ -21,7 +21,11 @@
         <td>{{$empleado->nombre}}</td>
         <td>{{$empleado->email}}</td>
         <td>{{$empleado->telefono}}</td>
-        <td>{{$empleado->proyecto->nombre}}</td>
+        <td>
+          @if($empleado->proyecto)
+          {{$empleado->proyecto->nombre}}
+          @endif
+        </td>
         <td><a href="{{route('departamentos.show', $empleado->departamento->id)}}">{{$empleado->departamento->nombre}}</a></td>
       </tr>
       @endforeach

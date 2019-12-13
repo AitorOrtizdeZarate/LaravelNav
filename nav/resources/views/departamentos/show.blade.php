@@ -11,6 +11,7 @@
       <th>Id</th>
       <th>Nombre</th>
       <th>Empleados</th>
+      <th>Jefe</th>
     </tr>
     
     <tr>
@@ -20,6 +21,11 @@
         @foreach($departamentos->empleados as $empleado)
           {{$empleado->nombre}}
         @endforeach
+        </td>
+        <td>
+          @if($departamentos->jefe)
+            {{$departamentos->jefe->nombre}}
+          @endif
         </td>
     </tr>
     

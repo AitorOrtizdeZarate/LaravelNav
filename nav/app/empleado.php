@@ -21,4 +21,8 @@ class empleado extends Model
     	return $this->belongsToMany('App\proyecto');
     }
 
+    public function jefeDe(){
+        return $this->hasOne('App\departamento', 'empleado_id');
+    }
+
 }

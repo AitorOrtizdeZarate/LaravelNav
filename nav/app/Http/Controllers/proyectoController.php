@@ -38,6 +38,15 @@ class proyectoController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nombre' => 'required',
+            'titulo' => 'required',
+            'fechainicio' => 'required|date',
+            'fechafin' => 'required|date|after:fechaIni',
+            'horasestimadas' => 'required|numeric',
+            'empleadoRes' => 'required|string'
+        ]);
+        
         $proyecto = new proyecto;
         $proyecto->nombre = $request->input('nombre');
         $proyecto->titulo = $request->input('titulo');

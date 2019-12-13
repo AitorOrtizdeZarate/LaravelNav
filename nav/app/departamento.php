@@ -12,4 +12,8 @@ class departamento extends Model
     public function empleados(){
         return $this->hasMany('App\empleado');
     }
+
+    public function jefe(){
+        return $this->belongsTo('App\empleado', 'empleado_id');
+    }
 }
