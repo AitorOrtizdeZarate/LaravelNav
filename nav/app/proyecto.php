@@ -12,4 +12,8 @@ class proyecto extends Model
      public function empleado(){
         return $this->belongsTo('App\empleado');
     }
+
+    public function empleados(){
+        return $this->belongsToMany('App\empleado');
+    }
 }

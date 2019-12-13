@@ -13,7 +13,7 @@ class ProyectoSeeder extends Seeder
     {
     	$fecha = date('Y/m/d');
   
-        for ($i=0;$i<20;$i++) {
+        for ($i=0;$i<5;$i++) {
             $fechainicio = strtotime ( "+".rand(1,31)." day" , strtotime ( $fecha ) ) ;
             $fechainicio = date ( 'Y/m/d' , $fechainicio);
       

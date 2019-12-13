@@ -15,6 +15,7 @@
         <th>Fecha fin</th>
         <th>Horas estimadas</th>
         <th>Empleado Responsable</th>
+        <th>Empleados colaboran</th>
       </tr>
       
       <tr>
@@ -25,6 +26,11 @@
         <td>{{$proyectos->fechafin}}</td>
         <td>{{$proyectos->horasestimadas}}</td>
         <td>{{$proyectos->empleado->nombre}}</td>
+        <td>
+          @foreach ($proyectos->empleados as $empleado)
+            {{$empleado->nombre}}
+          @endforeach
+        </td>
       </tr>
       
     </table>

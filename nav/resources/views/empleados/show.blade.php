@@ -14,6 +14,7 @@
         <th>Email</th>
         <th>Telefono</th>
         <th>Responsable de</th>
+        <th>Colabora en</th>
       </tr>
       
       <tr>
@@ -22,9 +23,14 @@
         <td>{{$empleados->email}}</td>
         <td>{{$empleados->telefono}}</td>
         <td>{{$empleados->proyecto->nombre}}</td>
+        <td>
+          
+          @foreach($empleados->proyectos as $proyecto)
+            {{$proyecto->nombre}}
+          @endforeach
+
+        </td>
       </tr>
      
     </table>
-
-
 @endsection

@@ -24,6 +24,8 @@ class Empleados extends Migration
             $table->unsignedBigInteger('departamento_id');
 
             $table->foreign('departamento_id')->references('id')->on('departamentos');
+
+            
         });
     }
 
